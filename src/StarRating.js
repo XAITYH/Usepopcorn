@@ -1,4 +1,4 @@
-import { startTransition, useState } from "react";
+import { useState } from "react";
 import PropTypes from "prop-types";
 
 const containerStyle = {
@@ -9,7 +9,6 @@ const containerStyle = {
 
 const starContainerStyle = {
   display: "flex",
-  gap: "4px",
 };
 
 StarRating.propTypes = {

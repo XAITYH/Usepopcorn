@@ -78,6 +78,8 @@ body {
   display: flex;
   align-items: center;
   gap: 0.8rem;
+  width: fit-content;
+  cursor: pointer;
 }
 
 .logo span {
@@ -191,7 +193,6 @@ body {
 .btn-delete {
   position: absolute;
   right: 2.4rem;
-
   height: 1.8rem;
   aspect-ratio: 1;
   border-radius: 50%;
