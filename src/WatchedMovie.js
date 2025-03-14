@@ -14,7 +14,7 @@ export default function WatchedMovie({ movie, handleDeleteWatched }) {
         </p>
         <p>
           <span>⏳</span>
-          <span>{movie.runtime} min</span>
+          <span>{movie.runtime}</span>
         </p>
 
         

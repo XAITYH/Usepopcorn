@@ -50,6 +50,17 @@ export default function MovieDetails({
   }
 
   useEffect(() => {
+    function callback(e) {
+      if (e.code === "Escape") handleCloseMovie();
+    }
+
+    document.addEventListener("keydown", callback);
+    return () => {
+      document.removeEventListener("keydown", callback);
+    };
+  }, [handleCloseMovie]);
+
+  useEffect(() => {
     async function getMovieDetails() {
       try {
         setLoading(true);
@@ -72,7 +83,16 @@ export default function MovieDetails({
       }
     }
     getMovieDetails();
-  }, [selectedId]);
+  }, [apiKey, selectedId]);
+
+  useEffect(() => {
+    if (!title) return;
+    document.title = title;
+
+    return () => {
+      document.title = "usePopcorn";
+    };
+  }, [title]);
 
   return (
     <div className="details">
